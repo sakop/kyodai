@@ -13,11 +13,11 @@ public class ExplosionView {
 
 	private int[] resources = new int[] { R.drawable.bom_f01,
 			R.drawable.bom_f02, R.drawable.bom_f03, R.drawable.bom_f04,
-			R.drawable.bom_f05, R.drawable.bom_f06, R.drawable.bom_f07,
+		//	R.drawable.bom_f05, R.drawable.bom_f06, R.drawable.bom_f07,
 			R.drawable.bom_f08, R.drawable.bom_f09, R.drawable.bom_f10,
 			R.drawable.bom_f11, R.drawable.bom_f12, R.drawable.bom_f13,
 			R.drawable.bom_f14, R.drawable.bom_f15, R.drawable.bom_f16,
-			R.drawable.bom_f17, R.drawable.bom_f18, R.drawable.bom_f19,
+		//	R.drawable.bom_f17, R.drawable.bom_f18, R.drawable.bom_f19,
 			R.drawable.bom_f20, R.drawable.bom_f21, R.drawable.bom_f22,
 			R.drawable.bom_f23, R.drawable.bom_f24, R.drawable.bom_f25,
 			R.drawable.bom_f26};
@@ -45,8 +45,8 @@ public class ExplosionView {
 			canvas.drawBitmap(bitmap, null, rect, null);
 			canvas.drawBitmap(bitmap, null, rect2, null);
 			holder.unlockCanvasAndPost(canvas);
-			holder.lockCanvas(new Rect());
-			holder.unlockCanvasAndPost(canvas);
+//			holder.lockCanvas(new Rect());
+//			holder.unlockCanvasAndPost(canvas);
 //			try {
 //				Thread.sleep(1);
 //			} catch (InterruptedException e) {

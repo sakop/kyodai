@@ -85,7 +85,7 @@ public class Client extends NetworkComponent {
 		text.setLayoutParams(new ViewGroup.LayoutParams(-2, -2));
 		text.setText("Ö÷»úIP");
 		final EditText editor = new EditText(context);
-		editor.setFilters(new InputFilter[] { new InputFilter.LengthFilter(15) });
+		editor.setFilters(new InputFilter[] { new InputFilter.LengthFilter(30) });
 		editor.setSingleLine(true);
 		editor.setLayoutParams(new ViewGroup.LayoutParams(-2, -2));
 		editor.setText(Util.getDefaultServerIp(context));

@@ -106,7 +106,7 @@ public class PictureManager {
 			Bitmap secondHalf = Bitmap.createBitmap(bm, 0, 0, 155, 300, matrix,
 					true);
 			smileFace1 = new Pair<Bitmap, Bitmap>(firstHalf, secondHalf);
-			bm.recycle();
+			//bm.recycle();
 		}
 		return smileFace1;
 	}
@@ -170,7 +170,7 @@ public class PictureManager {
 		networkBackground = Bitmap.createBitmap(bm, 303, 0, 310, 285);
 		cancelBm = Bitmap.createBitmap(bm, 920, 135, 104, 35);
 		confirmBm = Bitmap.createBitmap(bm, 188, 445, 98, 40);
-		bm.recycle();
+		//bm.recycle();
 	}
 
 	public Bitmap getNetworkSettingBackground(Context context) {
@@ -266,7 +266,7 @@ public class PictureManager {
 		lose = Bitmap.createBitmap(bm, 535, 230, 105, 75);
 		clearAllPics = Bitmap.createBitmap(bm, 790, 285, 195, 22);
 		opponentClearAllPics = Bitmap.createBitmap(bm, 395, 480, 195, 32);
-		bm.recycle();
+		//bm.recycle();
 	}
 
 	public Bitmap getClearAllPicsBM(Context context) {
@@ -309,7 +309,7 @@ public class PictureManager {
 		timeConsuming = Bitmap.createBitmap(bm, 610, 300, 70, 30);
 		timeOutBm = Bitmap.createBitmap(bm, 0, 482, 50, 22);
 		opponentTimeoutBm = Bitmap.createBitmap(bm, 450, 190, 90, 28);
-		bm.recycle();
+		//bm.recycle();
 	}
 
 	public Bitmap getOpponentTimeoutBm(Context context) {

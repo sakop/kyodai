@@ -59,7 +59,7 @@ public class GamePanel extends GameBoard {
 			// 成功消除一堆，调整蜗牛位置，调整剩余牌数
 			if (msg.what == 0x00) {
 				drawStatus();
-				drawSnail(width / 2 - Util.getXScaledValue(snailWidth));
+			//	drawSnail(width / 2 - Util.getXScaledValue(snailWidth));
 				Iterator<Rect> iterator = toBeCleaned.iterator();
 				for (; iterator.hasNext();) {
 					Rect rect = iterator.next();
@@ -530,7 +530,7 @@ public class GamePanel extends GameBoard {
 		PictureManager pm = PictureManager.getInstance();
 		Bitmap temp = bg;
 		bg = Bitmap.createBitmap(bg, 315, 0, 325, 480);
-		temp.recycle();
+		//temp.recycle();
 		Canvas canvas = holder.lockCanvas();
 		canvas.drawBitmap(bg, null, new Rect(0, 0, width / 2, height), null);
 		holder.unlockCanvasAndPost(canvas);
@@ -543,15 +543,15 @@ public class GamePanel extends GameBoard {
 					R.drawable.status);
 			Bitmap realStatusBm = Bitmap
 					.createBitmap(statusBm, 320, 0, 600, 90);
-			Bitmap snail = Bitmap.createBitmap(statusBm, 105, 310, 45, 40);
+			//Bitmap snail = Bitmap.createBitmap(statusBm, 105, 310, 45, 40);
 			Bitmap nobody = Bitmap.createBitmap(statusBm, 105, 350, 45, 45);
-			pm.addImage(PictureManager.SNAIL, snail);
+			//pm.addImage(PictureManager.SNAIL, snail);
 			pm.addImage(PictureManager.NOBODY, nobody);
 			pm.addImage(PictureManager.STATUS_BACKGROUND, realStatusBm);
 
 			Bitmap vsBm = pm.getCachedBitmap(getContext(), R.drawable.vs);
 			Bitmap vs = Bitmap.createBitmap(vsBm, 490, 330, 50, 65);
-			vsBm.recycle();
+			//vsBm.recycle();
 			pm.addImage(PictureManager.VS, vs);
 		}
 	}
@@ -661,23 +661,23 @@ public class GamePanel extends GameBoard {
 		holder.unlockCanvasAndPost(canvas);
 	}
 
-	public void drawSnail(int snailPosition) {
-		this.snailPosition = snailPosition;
-		Canvas canvas = holder.lockCanvas(new Rect(0, 0, width, Util
-				.getYScaledValue(120)));
-		Bitmap snail = PictureManager.getInstance().getImage(
-				PictureManager.SNAIL);
-		// 进度条的蜗牛
-		canvas.drawBitmap(
-				snail,
-				null,
-				new Rect(snailPosition, Util.getYScaledValue(80), snailPosition
-						+ Util.getXScaledValue(snailWidth), Util
-						.getYScaledValue(120)), null);
-		holder.unlockCanvasAndPost(canvas);
-		holder.lockCanvas(new Rect());
-		holder.unlockCanvasAndPost(canvas);
-	}
+//	public void drawSnail(int snailPosition) {
+//		this.snailPosition = snailPosition;
+//		Canvas canvas = holder.lockCanvas(new Rect(0, 0, width, Util
+//				.getYScaledValue(120)));
+//		Bitmap snail = PictureManager.getInstance().getImage(
+//				PictureManager.SNAIL);
+//		// 进度条的蜗牛
+//		canvas.drawBitmap(
+//				snail,
+//				null,
+//				new Rect(snailPosition, Util.getYScaledValue(80), snailPosition
+//						+ Util.getXScaledValue(snailWidth), Util
+//						.getYScaledValue(120)), null);
+//		holder.unlockCanvasAndPost(canvas);
+//		holder.lockCanvas(new Rect());
+//		holder.unlockCanvasAndPost(canvas);
+//	}
 
 	private String getRemainingCardsText(int count) {
 		if (count >= 10)

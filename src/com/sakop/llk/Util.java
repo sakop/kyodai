@@ -128,10 +128,16 @@ public class Util {
 			for (Enumeration<NetworkInterface> en = NetworkInterface
 					.getNetworkInterfaces(); en.hasMoreElements();) {
 				NetworkInterface intf = en.nextElement();
+				if(!intf.getName().equals("eth0"))
+					continue;
+				//[[lo][1][/::1%1%1][/127.0.0.1], 
+				//[sit0][4], 
+				//[eth1][3][/fe80::a00:27ff:feab:d7f9%eth1%3][/10.0.3.15],
+				//[eth0][2][/fe80::a00:27ff:fe04:2047%eth0%2][/192.168.56.101]]
 				for (Enumeration<InetAddress> enumIpAddr = intf
 						.getInetAddresses(); enumIpAddr.hasMoreElements();) {
 					InetAddress inetAddress = enumIpAddr.nextElement();
-					if (!inetAddress.isLoopbackAddress()) {
+					if (!inetAddress.isLoopbackAddress() && !inetAddress.isLinkLocalAddress()) {
 						return inetAddress.getHostAddress().toString();
 					}
 				}

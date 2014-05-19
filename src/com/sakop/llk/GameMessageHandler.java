@@ -71,7 +71,7 @@ public class GameMessageHandler extends Handler {
 			panel.snailPosition = panel.width / 2
 					- Util.getXScaledValue(GamePanel.snailWidth);
 			panel.drawStatus();
-			panel.drawSnail(panel.snailPosition);
+		//	panel.drawSnail(panel.snailPosition);
 			panel.drawButtons();
 			SystemState.state.set(SystemState.GAME_STATUS,
 					SystemState.GAME_PLAYING);
@@ -118,8 +118,8 @@ public class GameMessageHandler extends Handler {
 
 				return;
 			}
-			panel.redrawSnail(panel.getSnailPosition()
-					- Util.getXScaledValue(GamePanel.snailWidth));
+			//panel.redrawSnail(panel.getSnailPosition()
+				//	- Util.getXScaledValue(GamePanel.snailWidth));
 		}
 		// 客户端连接失败
 		else if (msg.what == 0x12345) {

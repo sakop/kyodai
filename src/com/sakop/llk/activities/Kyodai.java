@@ -352,7 +352,7 @@ public class Kyodai extends MyActivity implements OnShakeListener {
 					holder.lockCanvas(new Rect());
 					holder.unlockCanvasAndPost(canvas);
 					panel.drawStatus();
-					panel.drawSnail(panel.getSnailPosition());
+					//panel.drawSnail(panel.getSnailPosition());
 					panel.drawButtons();
 					if (!isToolTipShow)
 						alertDialog.show();
